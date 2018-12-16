@@ -38,12 +38,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pnlAdvance = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdvanced = new System.Windows.Forms.Button();
             this.gbSearch = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.gbQuestion.SuspendLayout();
             this.pnlAdvance.SuspendLayout();
             this.gbSearch.SuspendLayout();
@@ -100,10 +100,10 @@
             this.rbtnS1.AutoSize = true;
             this.rbtnS1.Location = new System.Drawing.Point(39, 12);
             this.rbtnS1.Name = "rbtnS1";
-            this.rbtnS1.Size = new System.Drawing.Size(127, 17);
+            this.rbtnS1.Size = new System.Drawing.Size(133, 17);
             this.rbtnS1.TabIndex = 2;
             this.rbtnS1.TabStop = true;
-            this.rbtnS1.Text = "DEFAUT QUESTION";
+            this.rbtnS1.Text = "DEFAULT QUESTION";
             this.rbtnS1.UseVisualStyleBackColor = true;
             this.rbtnS1.CheckedChanged += new System.EventHandler(this.rbtnS1_CheckedChanged);
             // 
@@ -157,6 +157,23 @@
             this.pnlAdvance.TabIndex = 7;
             this.pnlAdvance.Visible = false;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(123, 66);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(138, 21);
+            this.comboBox2.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Đơn vị chủ quản :";
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -197,24 +214,7 @@
             this.gbSearch.Size = new System.Drawing.Size(516, 214);
             this.gbSearch.TabIndex = 9;
             this.gbSearch.TabStop = false;
-            this.gbSearch.Text = "SEAECH ";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(123, 66);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(138, 21);
-            this.comboBox2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Đơn vị chủ quản :";
+            this.gbSearch.Text = "SEARCH ";
             // 
             // ASK_FORM
             // 
