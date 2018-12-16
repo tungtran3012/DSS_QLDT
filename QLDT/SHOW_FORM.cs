@@ -15,9 +15,10 @@ namespace QLDT
         public SHOW_FORM()
         {
             InitializeComponent();
+            ShowResult();
         }
 
-        private void btnShow_Click(object sender, EventArgs e)
+        private void ShowResult()
         {
             SqlConnection conn = new SqlConnection("Data Source=DESKTOP-RB4V9TR\\SQLEXPRESS;Initial Catalog=QLDT;Integrated Security=True");
             DataTable dt = new DataTable();
