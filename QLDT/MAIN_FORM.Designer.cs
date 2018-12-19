@@ -37,7 +37,7 @@
             // 
             // btnAsk
             // 
-            this.btnAsk.Location = new System.Drawing.Point(361, 409);
+            this.btnAsk.Location = new System.Drawing.Point(79, 411);
             this.btnAsk.Name = "btnAsk";
             this.btnAsk.Size = new System.Drawing.Size(93, 23);
             this.btnAsk.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // btnShow
             // 
-            this.btnShow.Location = new System.Drawing.Point(508, 409);
+            this.btnShow.Location = new System.Drawing.Point(612, 411);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(93, 23);
             this.btnShow.TabIndex = 0;
@@ -59,9 +59,10 @@
             // 
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(120, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(79, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(481, 357);
+            this.pictureBox1.Size = new System.Drawing.Size(626, 380);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -73,9 +74,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.btnAsk);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "QLDT_MAIN";
-            this.Text = "MAIN_FORM";
+            this.Text = "CƠ SỞ ĐÀO TẠO CNTT CẢ NƯỚC";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

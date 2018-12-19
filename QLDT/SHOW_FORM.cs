@@ -12,19 +12,19 @@ namespace QLDT
 {
     public partial class SHOW_FORM : Form
     {
-        public SHOW_FORM()
+        public SHOW_FORM(string query)
         {
             InitializeComponent();
-            ShowResult();
+            ShowResult(query);
         }
 
-        private void ShowResult()
+        private void ShowResult(string query)
         {
             SqlConnection conn = new SqlConnection("Data Source=DESKTOP-RB4V9TR\\SQLEXPRESS;Initial Catalog=QLDT;Integrated Security=True");
             DataTable dt = new DataTable();
-            string query = "Select * From [QLDT].[dbo].[cosodaotao]";
+            //string query = "Select * From [QLDT].[dbo].[cosodaotao]";
             SqlDataAdapter SDA = new SqlDataAdapter(query, conn);
-            //DialogResult result = MessageBox.Show(query, "Print");
+            DialogResult result = MessageBox.Show(query, "Print");
             SDA.Fill(dt);
             dataGridView1.DataSource = dt;
         }

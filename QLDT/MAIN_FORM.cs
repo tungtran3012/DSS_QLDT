@@ -11,6 +11,7 @@ namespace QLDT
 {
     public partial class QLDT_MAIN : Form
     {
+        string query = "Select TenTruong as 'Tên Trường' From [QLDT].[dbo].[cosodaotao]";
         public QLDT_MAIN()
         {
             InitializeComponent();
@@ -18,7 +19,8 @@ namespace QLDT
 
         private void btnHien_Click(object sender, EventArgs e)
         {
-            new SHOW_FORM().Show();
+            SHOW_FORM sf = new SHOW_FORM(query);
+            sf.Show();
         }
 
         private void btnAsk_Click(object sender, EventArgs e)

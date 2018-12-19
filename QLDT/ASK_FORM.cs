@@ -11,6 +11,7 @@ namespace QLDT
 {
     public partial class ASK_FORM : Form
     {
+        string query;
         public ASK_FORM()
         {
             InitializeComponent();
@@ -28,8 +29,8 @@ namespace QLDT
             else if (pnlAdvance.Visible == false)
             {
                 pnlAdvance.Visible = true;
-                this.Height = this.Height + pnlAdvance.Height;
-                this.MinimumSize = new Size(this.Width, this.Height);
+                //this.Height = this.Height + pnlAdvance.Height;
+                //this.MinimumSize = new Size(this.Width, this.Height);
             }
         }
 
@@ -47,22 +48,27 @@ namespace QLDT
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            new SHOW_FORM().Show();
+            query = "Select * From [QLDT].[dbo].[cosodaotao] WHERE [QLDT].[dbo].[cosodaotao].TenTruong like N'%" + txtBoxSearch.Text + "%'";
+            SHOW_FORM sf = new SHOW_FORM(query);
+            sf.Show();
         }
 
         private void llblQ1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new SHOW_FORM().Show();
+            //Các trường đào tạo CNTT ?
+            query = "Select * From [QLDT].[dbo].[cosodaotao] WHERE [QLDT].[dbo].[cosodaotao].TenTruong like N'%" + txtBoxSearch.Text + "%'";
+            SHOW_FORM sf = new SHOW_FORM(query);
+            sf.Show();
         }
 
         private void llblQ2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new SHOW_FORM().Show();
+            //new SHOW_FORM().Show(query);
         }
 
         private void llblQ3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new SHOW_FORM().Show();
+            //new SHOW_FORM().Show(query);
         }
 
        
