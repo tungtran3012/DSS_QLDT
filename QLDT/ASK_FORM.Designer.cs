@@ -202,6 +202,7 @@
             this.txtBoxSearch.Name = "txtBoxSearch";
             this.txtBoxSearch.Size = new System.Drawing.Size(254, 20);
             this.txtBoxSearch.TabIndex = 5;
+            this.txtBoxSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBoxSearch_KeyDown);
             // 
             // btnSearch
             // 
@@ -296,7 +297,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
             this.Name = "ASK_FORM";
-            this.Text = "ASK_FORM";
+            this.Text = "TRUY VẤN";
             this.gbQuestion.ResumeLayout(false);
             this.gbQuestion.PerformLayout();
             this.pnlAdvance.ResumeLayout(false);

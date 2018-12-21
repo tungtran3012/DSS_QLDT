@@ -54,11 +54,11 @@
     <Compile Include="ASK_FORM.Designer.cs">
       <DependentUpon>ASK_FORM.cs</DependentUpon>
     </Compile>
-    <Compile Include="MAIN_FORM.cs">
+    <Compile Include="QLDT_MAIN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MAIN_FORM.Designer.cs">
-      <DependentUpon>MAIN_FORM.cs</DependentUpon>
+    <Compile Include="QLDT_MAIN.Designer.cs">
+      <DependentUpon>QLDT_MAIN.cs</DependentUpon>
     </Compile>
     <Compile Include="SHOW_FORM.cs">
       <SubType>Form</SubType>
@@ -71,8 +71,8 @@
     <EmbeddedResource Include="ASK_FORM.resx">
       <DependentUpon>ASK_FORM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MAIN_FORM.resx">
-      <DependentUpon>MAIN_FORM.cs</DependentUpon>
+    <EmbeddedResource Include="QLDT_MAIN.resx">
+      <DependentUpon>QLDT_MAIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SHOW_FORM.resx">
       <DependentUpon>SHOW_FORM.cs</DependentUpon>

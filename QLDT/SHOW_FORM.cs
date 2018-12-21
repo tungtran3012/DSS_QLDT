@@ -18,15 +18,26 @@ namespace QLDT
             ShowResult(query);
         }
 
-        private void ShowResult(string query)
+        public void ShowResult(string query)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-RB4V9TR\\SQLEXPRESS;Initial Catalog=QLDT;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-RB4V9TR\\SQLEXPRESS;Initial Catalog=QLDT_V1;Integrated Security=True");
             DataTable dt = new DataTable();
-            //string query = "Select * From [QLDT].[dbo].[cosodaotao]";
+            
             SqlDataAdapter SDA = new SqlDataAdapter(query, conn);
             DialogResult result = MessageBox.Show(query, "Print");
             SDA.Fill(dt);
             dataGridView1.DataSource = dt;
+            DataGridViewColumn column = dataGridView1.Columns[0];
+            column.Width = 250;
+        }
+
+
+        private void SHOW_FORM_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            QLDT_MAIN qldt = new QLDT_MAIN();
+            qldt.ActiveBtnShow();
+            DialogResult result = MessageBox.Show("DA TAT", "Print");
+                
         }
     }
 }

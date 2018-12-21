@@ -48,15 +48,17 @@ namespace QLDT
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            query = "Select * From [QLDT].[dbo].[cosodaotao] WHERE [QLDT].[dbo].[cosodaotao].TenTruong like N'%" + txtBoxSearch.Text + "%'";
+            SearchByTxtBox();
+        }
+        private void SearchByTxtBox() {
+            query = "Select * From [QLDT_V1].[dbo].[cosodaotao] WHERE [QLDT_V1].[dbo].[cosodaotao].TenTruong like N'%" + txtBoxSearch.Text + "%'";
             SHOW_FORM sf = new SHOW_FORM(query);
             sf.Show();
         }
-
         private void llblQ1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //Các trường đào tạo CNTT ?
-            query = "Select * From [QLDT].[dbo].[cosodaotao] WHERE [QLDT].[dbo].[cosodaotao].TenTruong like N'%" + txtBoxSearch.Text + "%'";
+            query = "Select * From [QLDT_V1].[dbo].[cosodaotao] WHERE [QLDT_V1].[dbo].[cosodaotao].TenTruong like N'%" + txtBoxSearch.Text + "%'";
             SHOW_FORM sf = new SHOW_FORM(query);
             sf.Show();
         }
@@ -69,6 +71,14 @@ namespace QLDT
         private void llblQ3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //new SHOW_FORM().Show(query);
+        }
+
+        private void txtBoxSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (txtBoxSearch.Text != "" && e.KeyCode==Keys.Enter) 
+            {
+                SearchByTxtBox();
+            }
         }
 
        

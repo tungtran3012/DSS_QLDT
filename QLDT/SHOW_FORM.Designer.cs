@@ -49,7 +49,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "SHOW_FORM";
-            this.Text = "SHOW_FORM";
+            this.Text = "KẾT QUẢ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SHOW_FORM_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

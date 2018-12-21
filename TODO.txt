@@ -1,7 +1,8 @@
-Sửa tiêu đề các form
-Bỏ gạch chân ở link label và cho chữ to ra (ASK_FORM)
-Tiếng Việt hết
-Sau khi nhập từ  khóa nhấn enter để tìm
+Sửa tiêu đề các form ->x
+Bỏ gạch chân ở link label và cho chữ to ra (ASK_FORM)->x
+Tiếng Việt hết ->x
+Sau khi nhập từ  khóa nhấn enter để tìm->x
+
 Điều chỉnh kích thước các cột trong form show
 Sửa tên các cột thành tiếng việt sử dụng as
 
@@ -9,6 +10,7 @@ Thêm chức năng xuất ra file sau khi tìm kiếm
 Thay button search bằng icon
 
 1.Mẫu hỏi :
+1. Các trường đào tạo CNTT ?
 1. Các chuyên ngành đào tạo
 2. Danh sách các đơn vị chủ quản
 3. Số cơ sở đào tạo CNTT tại Hà Nội/Tp HCM?
