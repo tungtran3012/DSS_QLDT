@@ -50,43 +50,77 @@ namespace QLDT
         {
             SearchByTxtBox();
         }
+        private void ShowResultInSHOW_FORM(string query){
+            SHOW_FORM sf = new SHOW_FORM(query);
+            sf.Show();
+        }
         private void SearchByTxtBox() {
             query = "Select * From [QLDT_V1].[dbo].[cosodaotao] WHERE [QLDT_V1].[dbo].[cosodaotao].TenTruong like N'%" + txtBoxSearch.Text + "%'";
-            SHOW_FORM sf = new SHOW_FORM(query);
-            sf.Show();
-        }
-        private void llblQ1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //Các trường đào tạo CNTT ?
-            query = "Select * From [QLDT_V1].[dbo].[cosodaotao] WHERE [QLDT_V1].[dbo].[cosodaotao].TenTruong like N'%" + txtBoxSearch.Text + "%'";
-            SHOW_FORM sf = new SHOW_FORM(query);
-            sf.Show();
-        }
-
-        private void llblQ2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //new SHOW_FORM().Show(query);
-        }
-
-        private void llblQ3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //new SHOW_FORM().Show(query);
+            ShowResultInSHOW_FORM(query);
         }
 
         private void txtBoxSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            if (txtBoxSearch.Text != "" && e.KeyCode==Keys.Enter) 
+            if (txtBoxSearch.Text != "" && e.KeyCode == Keys.Enter)
             {
                 SearchByTxtBox();
             }
         }
+        private void llblQ1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Các trường đào tạo CNTT ?
+            query = "Select * From [QLDT_V1].[dbo].[cosodaotao]";
+            ShowResultInSHOW_FORM(query);
+        }
 
-       
-       
+        private void llblQ2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            query = "SELECT [QLDT_V1].[dbo].[cosodaotao].DVChuquan,COUNT(*) as 'Số trường' FROM [QLDT_V1].[dbo].[cosodaotao] group by [QLDT_V1].[dbo].[cosodaotao].DVChuquan";
+            ShowResultInSHOW_FORM(query);
+        }
+
+        private void llblQ3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            query = "SELECT [QLDT_V1].[dbo].[cosodaotao].[TenTruong] ,[QLDT_V1].[dbo].[chuyennganhdaotao].[MaNganh] ,[QLDT_V1].[dbo].[chuyennganhdaotao].[TenChuyenNganh] ,[QLDT_V1].[dbo].[cosonganh].[DiemChuan] FROM [QLDT_V1].[dbo].[chuyennganhdaotao],[QLDT_V1].[dbo].[cosonganh],[QLDT_V1].[dbo].[cosodaotao] WHERE [QLDT_V1].[dbo].[chuyennganhdaotao].MaNganh=[QLDT_V1].[dbo].[cosonganh].MaNganh AND [QLDT_V1].[dbo].[cosonganh].[MaTruong]=[QLDT_V1].[dbo].[cosodaotao].[MaTruong]";
+            ShowResultInSHOW_FORM(query);
+        }
+        private void llblQ4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Các chuyên ngành đào tạo công nghệ thông tin
+            query = "Select * From [QLDT_V1].[dbo].[chuyennganhdaotao]";
+            ShowResultInSHOW_FORM(query);
+        }
+        private void llblQ5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Các cơ sở đào tạo tại Tp.HCM
+            query = "SELECT * FROM [QLDT_V1].[dbo].[cosodaotao] WHERE TinhThanh=N'TP. Hồ Chí Minh'";
+            ShowResultInSHOW_FORM(query);
+        }
+        private void llblQ6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Các cơ sở đào tạo tại Hà Nội
+            query = "SELECT * FROM [QLDT_V1].[dbo].[cosodaotao] WHERE TinhThanh=N'Hà Nội'";
+            ShowResultInSHOW_FORM(query);
+        }
+
+        private void llblQ7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //Chỉ tiêu các trường
+            query = "SELECT [QLDT_V1].[dbo].[cosonganh].[MaTruong] ,[QLDT_V1].[dbo].[cosodaotao].[TenTruong] ,[QLDT_V1].[dbo].[cosonganh].[ChiTieu] FROM [QLDT_V1].[dbo].[cosonganh],[QLDT_V1].[dbo].[cosodaotao] WHERE [QLDT_V1].[dbo].[cosonganh].[MaTruong]=[QLDT_V1].[dbo].[cosodaotao].[MaTruong]";
+            ShowResultInSHOW_FORM(query);
+        }
+
+        private void llblQ8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            query = "SELECT [QLDT_V1].[dbo].[cosodaotao].[TinhThanh] ,COUNT([QLDT_V1].[dbo].[cosodaotao].[TenTruong]) as SLDV FROM [QLDT_V1].[dbo].[cosodaotao] Group by [QLDT_V1].[dbo].[cosodaotao].[TinhThanh]";
+            ShowResultInSHOW_FORM(query);
+        }
 
         
 
-        
+       
+
+       
 
        
     }

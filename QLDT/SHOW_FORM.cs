@@ -27,8 +27,8 @@ namespace QLDT
             DialogResult result = MessageBox.Show(query, "Print");
             SDA.Fill(dt);
             dataGridView1.DataSource = dt;
-            DataGridViewColumn column = dataGridView1.Columns[0];
-            column.Width = 250;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllHeaders;
         }
 
 
@@ -36,7 +36,7 @@ namespace QLDT
         {
             QLDT_MAIN qldt = new QLDT_MAIN();
             qldt.ActiveBtnShow();
-            DialogResult result = MessageBox.Show("DA TAT", "Print");
+            //DialogResult result = MessageBox.Show("DA TAT", "Print");
                 
         }
     }

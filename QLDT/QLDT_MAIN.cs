@@ -11,7 +11,7 @@ namespace QLDT
 {
     public partial class QLDT_MAIN : Form
     {
-        string query = "Select TenTruong as 'Tên Trường' From [QLDT_V1].[dbo].[cosodaotao]";
+        string query = "Select * From [QLDT_V1].[dbo].[cosodaotao]";
         public QLDT_MAIN()
         {
             InitializeComponent();
