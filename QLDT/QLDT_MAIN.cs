@@ -32,7 +32,7 @@ namespace QLDT
         public void ActiveBtnShow() {
             //InitializeComponent();
             btnShow.Enabled = true;
-            DialogResult result = MessageBox.Show(btnShow.Enabled.ToString(), "Print");
+            //DialogResult result = MessageBox.Show(btnShow.Enabled.ToString(), "Print");
         }
         public void ActiveBtnAsk()
         {

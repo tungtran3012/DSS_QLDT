@@ -20,7 +20,7 @@ namespace QLDT
 
         public void ShowResult(string query)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-RB4V9TR\\SQLEXPRESS;Initial Catalog=QLDT_V1;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-7FLFIH0\\SQLEXPRESS;Initial Catalog=QLDT_V1;Integrated Security=True");
             DataTable dt = new DataTable();
             
             SqlDataAdapter SDA = new SqlDataAdapter(query, conn);

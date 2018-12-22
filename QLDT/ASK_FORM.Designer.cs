@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.gbQuestion = new System.Windows.Forms.GroupBox();
+            this.llblQ2 = new System.Windows.Forms.LinkLabel();
+            this.llblQ3 = new System.Windows.Forms.LinkLabel();
+            this.llblQ5 = new System.Windows.Forms.LinkLabel();
             this.llblQ8 = new System.Windows.Forms.LinkLabel();
             this.llblQ7 = new System.Windows.Forms.LinkLabel();
             this.llblQ6 = new System.Windows.Forms.LinkLabel();
@@ -40,15 +43,12 @@
             this.txtBoxSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pnlAdvance = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbbDVChuQuan = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbTinhThanh = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdvanced = new System.Windows.Forms.Button();
             this.gbSearch = new System.Windows.Forms.GroupBox();
-            this.llblQ5 = new System.Windows.Forms.LinkLabel();
-            this.llblQ3 = new System.Windows.Forms.LinkLabel();
-            this.llblQ2 = new System.Windows.Forms.LinkLabel();
             this.gbQuestion.SuspendLayout();
             this.pnlAdvance.SuspendLayout();
             this.gbSearch.SuspendLayout();
@@ -71,6 +71,42 @@
             this.gbQuestion.TabIndex = 1;
             this.gbQuestion.TabStop = false;
             this.gbQuestion.Text = "GỢI Ý";
+            // 
+            // llblQ2
+            // 
+            this.llblQ2.AutoSize = true;
+            this.llblQ2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.llblQ2.Location = new System.Drawing.Point(27, 61);
+            this.llblQ2.Name = "llblQ2";
+            this.llblQ2.Size = new System.Drawing.Size(188, 13);
+            this.llblQ2.TabIndex = 10;
+            this.llblQ2.TabStop = true;
+            this.llblQ2.Text = "Số cơ sở đào tạo theo DV chủ quản ?";
+            this.llblQ2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ2_LinkClicked);
+            // 
+            // llblQ3
+            // 
+            this.llblQ3.AutoSize = true;
+            this.llblQ3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.llblQ3.Location = new System.Drawing.Point(27, 95);
+            this.llblQ3.Name = "llblQ3";
+            this.llblQ3.Size = new System.Drawing.Size(222, 13);
+            this.llblQ3.TabIndex = 9;
+            this.llblQ3.TabStop = true;
+            this.llblQ3.Text = "Điểm chuẩn từng chuyên ngành các trường ?";
+            this.llblQ3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ3_LinkClicked);
+            // 
+            // llblQ5
+            // 
+            this.llblQ5.AutoSize = true;
+            this.llblQ5.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.llblQ5.Location = new System.Drawing.Point(299, 29);
+            this.llblQ5.Name = "llblQ5";
+            this.llblQ5.Size = new System.Drawing.Size(193, 13);
+            this.llblQ5.TabIndex = 8;
+            this.llblQ5.TabStop = true;
+            this.llblQ5.Text = "Các cơ sở đào tạo CNTT tại Tp.HCM ?";
+            this.llblQ5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ5_LinkClicked);
             // 
             // llblQ8
             // 
@@ -185,9 +221,9 @@
             // 
             // pnlAdvance
             // 
-            this.pnlAdvance.Controls.Add(this.comboBox2);
+            this.pnlAdvance.Controls.Add(this.cbbDVChuQuan);
             this.pnlAdvance.Controls.Add(this.label2);
-            this.pnlAdvance.Controls.Add(this.comboBox1);
+            this.pnlAdvance.Controls.Add(this.cbbTinhThanh);
             this.pnlAdvance.Controls.Add(this.label1);
             this.pnlAdvance.Location = new System.Drawing.Point(27, 75);
             this.pnlAdvance.Name = "pnlAdvance";
@@ -195,13 +231,13 @@
             this.pnlAdvance.TabIndex = 7;
             this.pnlAdvance.Visible = false;
             // 
-            // comboBox2
+            // cbbDVChuQuan
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(123, 66);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(138, 21);
-            this.comboBox2.TabIndex = 3;
+            this.cbbDVChuQuan.FormattingEnabled = true;
+            this.cbbDVChuQuan.Location = new System.Drawing.Point(123, 66);
+            this.cbbDVChuQuan.Name = "cbbDVChuQuan";
+            this.cbbDVChuQuan.Size = new System.Drawing.Size(138, 21);
+            this.cbbDVChuQuan.TabIndex = 3;
             // 
             // label2
             // 
@@ -212,13 +248,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Đơn vị chủ quản :";
             // 
-            // comboBox1
+            // cbbTinhThanh
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(123, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cbbTinhThanh.FormattingEnabled = true;
+            this.cbbTinhThanh.Location = new System.Drawing.Point(123, 25);
+            this.cbbTinhThanh.Name = "cbbTinhThanh";
+            this.cbbTinhThanh.Size = new System.Drawing.Size(138, 21);
+            this.cbbTinhThanh.TabIndex = 1;
             // 
             // label1
             // 
@@ -253,42 +289,6 @@
             this.gbSearch.TabIndex = 9;
             this.gbSearch.TabStop = false;
             this.gbSearch.Text = "TIÊU CHÍ";
-            // 
-            // llblQ5
-            // 
-            this.llblQ5.AutoSize = true;
-            this.llblQ5.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.llblQ5.Location = new System.Drawing.Point(299, 29);
-            this.llblQ5.Name = "llblQ5";
-            this.llblQ5.Size = new System.Drawing.Size(193, 13);
-            this.llblQ5.TabIndex = 8;
-            this.llblQ5.TabStop = true;
-            this.llblQ5.Text = "Các cơ sở đào tạo CNTT tại Tp.HCM ?";
-            this.llblQ5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ5_LinkClicked);
-            // 
-            // llblQ3
-            // 
-            this.llblQ3.AutoSize = true;
-            this.llblQ3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.llblQ3.Location = new System.Drawing.Point(27, 95);
-            this.llblQ3.Name = "llblQ3";
-            this.llblQ3.Size = new System.Drawing.Size(222, 13);
-            this.llblQ3.TabIndex = 9;
-            this.llblQ3.TabStop = true;
-            this.llblQ3.Text = "Điểm chuẩn từng chuyên ngành các trường ?";
-            this.llblQ3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ3_LinkClicked);
-            // 
-            // llblQ2
-            // 
-            this.llblQ2.AutoSize = true;
-            this.llblQ2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.llblQ2.Location = new System.Drawing.Point(27, 61);
-            this.llblQ2.Name = "llblQ2";
-            this.llblQ2.Size = new System.Drawing.Size(188, 13);
-            this.llblQ2.TabIndex = 10;
-            this.llblQ2.TabStop = true;
-            this.llblQ2.Text = "Số cơ sở đào tạo theo DV chủ quản ?";
-            this.llblQ2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblQ2_LinkClicked);
             // 
             // ASK_FORM
             // 
@@ -326,9 +326,9 @@
         private System.Windows.Forms.Panel pnlAdvance;
         private System.Windows.Forms.Button btnAdvanced;
         private System.Windows.Forms.GroupBox gbSearch;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbTinhThanh;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbbDVChuQuan;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel llblQ8;
         private System.Windows.Forms.LinkLabel llblQ7;
