@@ -53,7 +53,7 @@ namespace QLDT
         {
             var list = new List<String>();
             list.Add("None");
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-7FLFIH0\\SQLEXPRESS;Initial Catalog=QLDT_V1;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
             conn.Open();
             string sql = "SELECT * FROM [QLDT_V1].[dbo].[cosodaotao]";
             using (var command = new SqlCommand(sql, conn))
@@ -132,7 +132,7 @@ namespace QLDT
         private void ShowResultInSHOW_FORM(string query)
         {
             SHOW_FORM sf = new SHOW_FORM(query);
-            sf.Show();
+            sf.ShowDialog();
         }
         private void llblQ1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

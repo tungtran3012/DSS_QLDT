@@ -20,23 +20,12 @@ namespace QLDT
         private void btnShow_Click(object sender, EventArgs e)
         {
             SHOW_FORM sf = new SHOW_FORM(query);
-            sf.Show();
-            btnShow.Enabled = false;
+            sf.ShowDialog();
         }
 
         private void btnAsk_Click(object sender, EventArgs e)
         {
-            new ASK_FORM().Show();
-            btnAsk.Enabled = false;
-        }
-        public void ActiveBtnShow() {
-            //InitializeComponent();
-            btnShow.Enabled = true;
-            //DialogResult result = MessageBox.Show(btnShow.Enabled.ToString(), "Print");
-        }
-        public void ActiveBtnAsk()
-        {
-            btnAsk.Enabled = true;
+            new ASK_FORM().ShowDialog();
         }
     }
 }
